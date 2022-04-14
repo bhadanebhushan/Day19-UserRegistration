@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class UserRegistrationMain {
 	static Scanner scanner = new Scanner(System.in);
 
-	
 	public static void main(String[] args) {
 		while (true) {
 
@@ -18,7 +17,8 @@ public class UserRegistrationMain {
 			System.out.println("Enter 6 : To validate Password Rule 2 (Upper Case) ");
 			System.out.println("Enter 7 : To validate Password Rule 3 (Upper Case & One Numeric Number)");
 			System.out.println(
-					"Enter 8 : to validate Password Rule 3 (Upper Case & One Numeric Number & One Special Character)");
+					"Enter 8 : To validate Password Rule 4 (Upper Case & One Numeric Number & One Special Character)");
+			System.out.println("Enter 9 : To validate a Simple Gmail Address");
 
 			switch (scanner.nextInt()) {
 			case 0:
@@ -54,6 +54,10 @@ public class UserRegistrationMain {
 
 			case 8:
 				UserRegistration.validPassRule4();
+				break;
+
+			case 9:
+				UserRegistration.emailSamples();
 				break;
 
 			default:

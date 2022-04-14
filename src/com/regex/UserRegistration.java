@@ -8,7 +8,6 @@ public class UserRegistration {
 
 	static Scanner scanner = new Scanner(System.in);
 
-	
 	public static void validFirstName() {
 
 		System.out.println("Enter First Name:");
@@ -26,7 +25,6 @@ public class UserRegistration {
 
 	}
 
-	
 	public static void validLastName() {
 
 		System.out.println("Enter Last Name:");
@@ -44,7 +42,6 @@ public class UserRegistration {
 
 	}
 
-	
 	public static void validEmail() {
 
 		System.out.println("Enter E-mail:");
@@ -62,7 +59,6 @@ public class UserRegistration {
 
 	}
 
-	
 	public static void validMobileNumber() {
 
 		System.out.print("Enter your Mobile Number : ");
@@ -77,7 +73,6 @@ public class UserRegistration {
 			System.out.println("Phone Number is Invalid");
 	}
 
-	
 	public static void validPassRule1() {
 		System.out.print("Enter The Password Atleast Eight Character : ");
 		String passWord = scanner.nextLine();
@@ -90,7 +85,6 @@ public class UserRegistration {
 		else
 			System.out.println("Password is Invalid");
 	}
-
 	
 	public static void validPassRule2() {
 		System.out.print("Enter the Password Atleast One Upper Case & Eight Character :");
@@ -104,7 +98,6 @@ public class UserRegistration {
 		else
 			System.out.println("Password is Invalid");
 	}
-
 	
 	public static void validPassRule3() {
 		System.out.println("Enter the Password Atleast One Upper Case & One Numaric");
@@ -131,5 +124,19 @@ public class UserRegistration {
 			System.out.println("Password is Valid");
 		else
 			System.out.println("Password is Invalid");
+	}
+
+	
+	public static void emailSamples() {
+		System.out.print("Enter the email : @gmail.com ");
+		String emailSample = scanner.next();
+		String regex6 = "[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+";
+		Pattern p6 = Pattern.compile(regex6);
+		Matcher m6 = p6.matcher(emailSample);
+		boolean r6 = m6.matches();
+		if (r6)
+			System.out.println("Valid G-mail Address");
+		else
+			System.out.println("Invalid G-mail Address");
 	}
 }
