@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class UserRegistrationMain {
 	static Scanner scanner = new Scanner(System.in);
 
-	
+	/*
+	 * @Purpose : Taking Proper Values From User
+	 */
 	public static void main(String[] args) {
 		while (true) {
 
@@ -15,6 +17,7 @@ public class UserRegistrationMain {
 			System.out.println("Enter 3 : To validate E-mail ");
 			System.out.println("Enter 4 : To validate Moblie Number ");
 			System.out.println("Enter 5 : To validate Password Rule 1 ");
+			System.out.println("Enter 6 : To validate Password Rule 2 (Upper Case) ");
 
 			switch (scanner.nextInt()) {
 			case 0:
@@ -38,6 +41,10 @@ public class UserRegistrationMain {
 
 			case 5:
 				UserRegistration.validPassRule1();
+				break;
+
+			case 6:
+				UserRegistration.validPassRule2();
 				break;
 
 			default:
